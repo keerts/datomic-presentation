@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Datomic - The fully transactional, cloud-ready, distributed database</title>
+
+		<meta name="description" content="Datomic - The fully transactional, cloud-ready, distributed database">
+		<meta name="author" content="Gert-Jan van de Streek">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/avisi.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Datomic</h1>
+					<p>
+						<small>by <a href="http://www.avisi.nl">Gert-Jan van de Streek</a> / <a
+                href="http://twitter.com/keerts">@keerts</a></small>
+					</p>
+				</section>
+        <section><h1>database</h1></section>
+        <section><h1>new kind of database</h1></section>
+        <section><h1>?</h1></section>
+        <section><h1>wat is</h1></section>
+        <section><h1>old kind of database</h1></section>
+        <section><h1>wat is data?</h1></section>
+        <section><h1>Gert-Jan</h1></section>
+        <section><h1>Zwolle</h1></section>
+        <section><h1>Oldebroek</h1></section>
+        <section><h1>Mastenbroek</h1></section>
+        <section><h1>Enschede</h1></section>
+        <section><h1>Austin</h1></section>
+        <section><img width="400" src="images/Texas_flag_map.svg" ></section>
+        <section><img width="400" src="images/texas_by_state.png" ></section>
+        <section><h1>Ronneby</h1></section>
+        <section><img width="400" src="images/ronneby.png" ></section>
+        <section><h1>Enschede</h1></section>
+        <section><h1>Austin</h1></section>
+        <section><h1>hərt- ǰæn</h1></section>
+        <section><img width="400" src="images/hurt-jan.jpg" ></section>
+        <section><h1>Enschede</h1></section>
+        <section><h1>Ameide</h1></section>
+        <section><h1>Tienhoven</h1></section>
+        <section><h1>Ameide</h1></section>
+        <section><h1>Ottoland</h1></section>
+        <section><h1>where the streets have no name</h1></section>
+        <section data-transition="slide-in"><h1>A</h1></section>
+        <section data-transition="slide-in"><h1>B</h1></section>
+        <section><img width="400" src="images/a.jpg" ></section>
+        <section><img width="500" src="images/straatnaam-fout.png" ></section>
+        <section><h1>dus...</h1></section>
+        <section><h1>wat is data?</h1></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Ottoland
+            11 | Mitchel| Oosterbeek
+            12 |Tomas| Mook
+        </script></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Ottoland
+        </script></section>
+				<section data-transition="fade-out" data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Oldebroek
+        </script></section>
+				<section data-transition="fade-out" data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan|~~Oldebroek~~ 
+        </script></section>
+				<section data-transition="fade-in" data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Mastenbroek
+        </script></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| ~~Mastenbroek~~
+        </script></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan|Enschede 
+        </script></section>
+        <section><h1>nu</h1></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Ottoland
+        </script></section>
+        <section><h1>waarom vervangen we data?</h1></section>
+        <section><h1>$</h1></section>
+        <section><h1>the price of</h1></section>
+        <section><h1>1 Gigabyte</h1></section>
+        <section><h1>1980</h1></section>
+        <section><h1>$ 300.000</h1></section>
+        <section><h1>1990</h1></section>
+        <section><h1>$ 10.000</h1></section>
+        <section><h1>2000</h1></section>
+        <section><h1>$ 10</h1></section>
+        <section><h1>2010</h1></section>
+        <section><h1>$ 0.10</h1></section>
+        <section><h1>nu</h1></section>
+        <section><img width="400" src="images/free-storage.png" ></section>
+        <section><h1>new kind of database</h1></section>
+        <section><h1># 1</h1></section>
+        <section><img width="400" src="images/time.jpg" ></section>
+				<section data-markdown><script type="text/template">
+            id|name|residence
+            --- | --- | --- 
+            10 | Gert-Jan| Ottoland
+        </script></section>
+				<section data-markdown><script type="text/template">
+            entity (e) | attribute (a) | value (v)
+            --- | --- | --- 
+            10 | name | Gert-Jan
+            10 | residence | Ottoland
+        </script></section>
+				<section data-markdown><script type="text/template">
+            e | a | v | transaction | added?
+            --- | --- | --- 
+            10 | name | Gert-Jan | t1 | yes
+            10 | residence | Oldebroek | t1 | no
+            10 | residence | Mastenbroek | t2 | no
+            10 | residence | Enschede  | t3 | no
+            10 | residence | Ottoland | t4 | yes
+        </script>
+        <aside class="notes">
+          datoms!
+        </aside>
+
+        </section>
+        <section><h1>the past</h1></section>
+        <section><h1>does not change</h1></section>
+        <section><h1>data</h1></section>
+        <section><h1>immutable</h1></section>
+        <section>
+          <img width="400" src="images/immutable.jpg" >
+					<aside class="notes">
+            fantastic fit for clojure community
+					</aside>
+        </section>
+
+
+        <section><h1># 2</h1></section>
+        <section><h1>powerfull data manipulation</h1></section>
+        <section><h1>in the application!</h1></section>
+        <section><h1>queries</h1></section>
+        <section><h1>transacties</h1></section>
+        <section><h1>consistentie</h1></section>
+        <section><h1>storage</h1></section>
+        <section><h1>all in the database</h1></section>
+        <section><img width="800" src="images/classic.png" ></section>
+        <section>
+          <section><img width="800" src="images/not-so-classic.png" >
+            <aside class="notes">
+              <ul>
+                <li>seperating reads and writes (transactor can focus)</li>
+                <li>built-in-caching</li>
+                <li>you get your own brain: query locally</li>
+                <li>at the speed of memory!</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <img width="800" src="images/not-so-classic2.png">
+          </section>
+        </section>
+        <section><img width="800" src="images/datomic.png" ></section>
+        <section>
+          <img width="800" src="images/not-so-classic.png" >
+          <aside class="notes">
+            peers
+            transactor
+            storage
+          </aside>
+        </section>
+        <section><h2>bring your own data</h2></section>
+        <section><h2>bring your own functions</h2></section>
+
+
+
+        <section>
+          <h2>Pretty Code</h2>
+          <pre><code class="hljs" data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+          </code></pre>
+          <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        </section>
+
+        <section><img width="800" src="images/pickme.png" ></section>
+        <section><h1>ongeschikt</h1></section>
+        <section><h2>write scale</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
+        <section><h2>media storage</h2><aside class="notes">images / documents / video</section>
+        <section><h2>write scale</h2></section>
+
+        <section><h1>geschikt</h1></section>
+        <section><h2>history</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
+        <section><h2>system of record database</h2><aside class="notes">CRM! waardevolle informatie waar je op vertrouwt, die je bevraag en die je van tijd tot muteert</section>
+        <section><h2>read scale</h2></section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+
+  transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+  // Optional reveal.js plugins
+  dependencies: [
+  { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+  { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+  { src: 'plugin/zoom-js/zoom.js', async: true },
+  { src: 'plugin/notes/notes.js', async: true }
+  ]
+});
+
+    </script>
+
+  </body>
+</html>
