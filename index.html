@@ -54,7 +54,6 @@
         <section><h1>old kind of database</h1></section>
         <section><h1>wat is data?</h1></section>
         <section><h1>Gert-Jan</h1></section>
-        <section><h1>Zwolle</h1></section>
         <section><h1>Oldebroek</h1></section>
         <section><h1>Mastenbroek</h1></section>
         <section><h1>Enschede</h1></section>
@@ -72,7 +71,7 @@
         <section><h1>Tienhoven</h1></section>
         <section><h1>Ameide</h1></section>
         <section><h1>Ottoland</h1></section>
-        <section><h1>where the streets have no name</h1></section>
+        <section><img width="800" src="images/where-the-streets-have-no-name.jpg" ></section>
         <section data-transition="slide-in"><h1>A</h1></section>
         <section data-transition="slide-in"><h1>B</h1></section>
         <section><img width="400" src="images/a.jpg" ></section>
@@ -82,45 +81,45 @@
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Ottoland
-            11 | Mitchel| Oosterbeek
-            12 |Tomas| Mook
+            1000 | Gert-Jan| Ottoland
+            1001 | John| Enschede
+            1002 | Mark| Amsterdam
         </script></section>
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Ottoland
+            1000 | Gert-Jan| Ottoland
         </script></section>
 				<section data-transition="fade-out" data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Oldebroek
+            1000 | Gert-Jan| Oldebroek
         </script></section>
 				<section data-transition="fade-out" data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan|~~Oldebroek~~ 
+            1000 | Gert-Jan|~~Oldebroek~~ 
         </script></section>
 				<section data-transition="fade-in" data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Mastenbroek
+            1000 | Gert-Jan| Mastenbroek
         </script></section>
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| ~~Mastenbroek~~
+            1000 | Gert-Jan| ~~Mastenbroek~~
         </script></section>
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan|Enschede 
+            1000 | Gert-Jan|Enschede 
         </script></section>
         <section><h1>nu</h1></section>
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Ottoland
+            1000 | Gert-Jan| Ottoland
         </script></section>
         <section><h1>waarom vervangen we data?</h1></section>
         <section><h1>$</h1></section>
@@ -142,22 +141,25 @@
 				<section data-markdown><script type="text/template">
             id|name|residence
             --- | --- | --- 
-            10 | Gert-Jan| Ottoland
+            1000 | Gert-Jan| Ottoland
         </script></section>
 				<section data-markdown><script type="text/template">
             entity (e) | attribute (a) | value (v)
             --- | --- | --- 
-            10 | name | Gert-Jan
-            10 | residence | Ottoland
+            1000 | name | Gert-Jan
+            1000 | residence | Ottoland
         </script></section>
 				<section data-markdown><script type="text/template">
             e | a | v | transaction | added?
             --- | --- | --- 
-            10 | name | Gert-Jan | t1 | yes
-            10 | residence | Oldebroek | t1 | no
-            10 | residence | Mastenbroek | t2 | no
-            10 | residence | Enschede  | t3 | no
-            10 | residence | Ottoland | t4 | yes
+            1000 | name | Gert-Jan | t1 | yes
+            1000 | residence | Oldebroek | t1 | yes
+            1000 | residence | Oldebroek | t2 | no
+            1000 | residence | Mastenbroek | t2 | yes
+            1000 | residence | Mastenbroek | t3 | no
+            1000 | residence | Enschede  | t3 | yes
+            1000 | residence | Enschede  | t4 | no
+            1000 | residence | Ottoland | t4 | yes
         </script>
         <aside class="notes">
           datoms!
@@ -174,19 +176,21 @@
             fantastic fit for clojure community
 					</aside>
         </section>
+        <section><h2>no transaction for read</h2></section>
+        <section><h2>unlimited caching</h2></section>
 
 
         <section><h1># 2</h1></section>
-        <section><h1>powerfull data manipulation</h1></section>
+        <section><h1>powerful data manipulation</h1></section>
         <section><h1>in the application!</h1></section>
         <section><h1>queries</h1></section>
         <section><h1>transacties</h1></section>
         <section><h1>consistentie</h1></section>
         <section><h1>storage</h1></section>
         <section><h1>all in the database</h1></section>
-        <section><img width="800" src="images/classic.png" ></section>
+        <section><img width="400" src="images/classic.png" ></section>
         <section>
-          <section><img width="800" src="images/not-so-classic.png" >
+          <section><img width="800" src="images/datomic.png" >
             <aside class="notes">
               <ul>
                 <li>seperating reads and writes (transactor can focus)</li>
@@ -197,54 +201,346 @@
             </aside>
           </section>
           <section>
-            <img width="800" src="images/not-so-classic2.png">
+            <img width="800" src="images/not-so-classic.png" >
+            <aside class="notes">
+              peers
+              transactor
+              storage
+            </aside>
           </section>
-        </section>
-        <section><img width="800" src="images/datomic.png" ></section>
-        <section>
-          <img width="800" src="images/not-so-classic.png" >
-          <aside class="notes">
-            peers
-            transactor
-            storage
-          </aside>
-        </section>
-        <section><h2>bring your own data</h2></section>
+          </section>
+          <section><h2>bring your own data</h2></section>
         <section><h2>bring your own functions</h2></section>
 
+        <section><h2>Show me!</h2></section>
+        <section><h2>Not so fast...</h2></section>
+        <section><h2>notation</h2></section>
+        <section><h2>edn</h2><aside class="notes">extensible data notation,
+            docs, clojure (Java: Maps, Lists, etc...)<br/>
+         Everything in terms of data</aside></section>
+        <section>
+          <pre><code class="clj" data-trim contenteditable>
+{ :name "Gert-Jan"
+  :residence "Ottoland"
+  :address {
+    :streetAdress "A 117"
+    :postalCode "2975 BE"
+  }
+  :phoneNumber [
+    { :type "mobile"
+      :number "06-22544660" }
+    { :type "home"
+      :number "0184-769020" } ] }
+          </code></pre>
+          <aside class="notes">
+            edn is conscise <br/>
+          for Java use maps / lists
+          </aside>
+        </section>
 
+        <section><h2>datoms</h2><aside class="notes">lowest level, does not
+            change, immutable</aside></section>
+				<section data-markdown><script type="text/template">
+            e | a | v | t | added?
+            --- | --- | --- 
+            1000 | name | Gert-Jan | tx | yes
+        </script></section>
+        <section>
+          <section>
+            <pre><code class="clj" data-trim contenteditable>
+            [db/add 1000 :user/name "Gert-Jan"]
+            </code></pre>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section><img width="800" src="images/datomic.png" ></section>
+        </section>
+        <section data-markdown><script type="text/template">
+        e | a | v
+            --- | --- | --- 
+            1000 | name | Gert-Jan
+            1000 | residence | Ottoland
+        </script></section>
+        <section><h2>entities</h2></section>
+        <section><h2>view on datoms</h2></section>
+        <section><h2>hebben 1 ding gemeen</h2></section>
+        <section><h2>e</h2></section>
+        <section><h2>immutable</h2></section>
+        <section><h2>lazy</h2><aside class="notes">lazy because immutable</aside> </section>
+          <section>
+            <pre><code class="clj" data-trim contenteditable>
+[:db/add 1000 :user/name "Gert-Jan"]
+[:db/add 1000 :user/residence "Ottoland"]
+            </code></pre>
+            <pre><code class="clj" data-trim contenteditable>
+{:db/id 1000
+ :user/name "Gert-Jan"
+ :user/residence "Ottoland"}
+            </code></pre>
+            <aside class="notes">
+            </aside>
+          </section>
+        <section>
+          <section>
+            <pre><code class="clj" data-trim contenteditable>
+[db/add #db/id[:db.part/user -1] :user/name "Gert-Jan"]
+[db/add #db/id[:db.part/user -2] :user/residence "Ottoland"]
+            </code></pre>
+            <pre><code class="clj" data-trim contenteditable>
+{:db/id #db/id[:db.part/user -1]
+ :user/name "Gert-Jan"
+ :user/residence "Ottoland"}
+            </code></pre>
+            <aside class="notes">
+              # == data literal
+            </aside>
+          </section>
+          <section>
+            <pre><code class="clj" data-trim contenteditable>
+[{:db/id #db/id[:db.part/user -1]
+  :person/name "Bob"
+  :person/spouse #db/id[:db.part/user -2]}
+
+ {:db/id #db/id[:db.part/user -2]
+  :person/name "Alice"
+  :person/spouse #db/id[:db.part/user -1]}]
+            </code></pre>
+          </section>
+        </section>
+
+        <section><h2>schema</h2></section>
+        <section><h2>add</h2></section>
+        <section><img width="400" src="images/power.jpg" ></section> <aside class="notes">schemaless is powerless</aside></section>
+      <section><h2>just data</h2></section>
+      <section><h2>characteristics of a's</h2></section>
+        <section>
+          <section>
+            <p data-markdown>
+e | a | v
+--- | --- | --- 
+1000 | name | Gert-Jan
+            </p>
+            <pre><code class="clj" data-trim contenteditable>
+{:db/id #db/id[:db.part/db]
+ :db/ident :user/name
+ :db/valueType :db.type/string
+ :db/cardinality :db.cardinality/one
+ :db.install/_attribute :db.part/db}
+            </code></pre>
+            <aside class="notes">
+            </aside>
+          </section>
+          <section>
+            <pre><code class="clj" data-trim contenteditable>
+;;add a transaction function called add-doc
+[{:db/id #db/id [:db.part/user]
+  :db/ident :add-doc
+  :db/fn #db/fn {:lang "java"
+  :params [db e doc]
+  :code "return list(list(\":db/add\", e,
+      \":db/doc\", doc));"}}]
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <p data-markdown>
+e | a | v
+--- | --- | --- 
+1000 | phonenumber | 1204
+          </p>
+          <pre><code class="clj" data-trim contenteditable>
+{:db/id #db/id[:db.part/db]
+ :db/ident :user/phonenumber
+ :db/valueType :db.type/ref
+ :db/cardinality :db.cardinality/many
+ :db.install/_attribute :db.part/db}
+          </code></pre>
+          <aside class="notes">
+Datamic does not store nil: if you don't have to say anything about something,
+don't say it
+          </aside>
+        </section>
 
         <section>
-          <h2>Pretty Code</h2>
-          <pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-          </code></pre>
-          <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+        <section><h1>Transacties</h1></section>
+        <section><h1>ACID</h1></section>
+        <section><h2>A atomic</h2><aside class="notes">single write: set of datomas</aside></section>
+        <section><h2>single write</h2><aside class="notes">single write: set of datoms</aside></section>
+        <section><h2>set of datoms</h2><aside class="notes">single write: set of datoms</aside></section>
+        <section><h2>C consistent</h2><aside class="notes">alle processen zien dezelfde 'volgorde van transacties'</aside></section>
+        <section><h2>volgorde</h2><aside class="notes">alle processen zien dezelfde 'volgorde van transacties'</aside></section>
+        <section><h2>I isolated</h2><aside class="notes">single writer</aside></section>
+        <section><h2>transactor</h2><aside class="notes">single writer</aside></section>
+        <section><h2>D durable</h2><aside class="notes">single writer</aside></section>
+        <section><h2>flush naar onderliggende storage</h2><aside class="notes">dan pas compleet, no cheating</aside></section>
         </section>
+
+        <section><h1>show me!</h1></section>
+
+        <section><h1>querying</h1><aside class="notes"></aside></section>
+        <section>
+          <section><h2>pull</h2><aside class="notes">declaratieve manier
+              om informatie over een entity op te halen</aside></section>
+        </section>
+        <section>
+          <pre><code class="clj" data-trim contenteditable>
+;; pattern
+[:artist/name :artist/gid]
+
+;; pattern
+[:track/name {:track/artists [:db/id :artist/name]}]
+          </code></pre>
+        </section>
+        <section><h2>entity</h2><aside class="notes">attributen, gelinkte
+            entities, lazy navigation, denk aan
+            het traversen van een graaf</aside></section>
+        <section>
+          <pre><code class="java" data-trim contenteditable>
+jane = db.entity(42)
+
+firstName = jane.get(":person/firstName")
+
+address = jane.get(":person/address")
+          </code></pre>
+        </section>
+        <section><h2>datalog</h2><aside class="notes">declaritive, pattern
+            matching, prolog, same expression power as SQL</aside></section>
+
+        <section>
+          <pre><code class="java" data-trim contenteditable>
+[:find variables
+ :where clause
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code class="java" data-trim contenteditable>
+[[sally :age 21] 
+ [fred :age 42] 
+ [ethel :age 42]
+ [fred :likes pizza] 
+ [sally :likes opera] 
+ [ethel :likes sushi]]
+          </code></pre>
+          <pre><code class="java" data-trim contenteditable>
+[:find ?e
+ :where [?e :age 42]]
+          </code></pre>
+          <p class="fragment">
+          [[fred], [ethel]]
+          </p>
+        </section>
+
+        <section>
+          <pre><code class="java" data-trim contenteditable>
+[[sally :age 21] 
+ [fred :age 42] 
+ [ethel :age 42]
+ [fred :likes pizza] 
+ [sally :likes opera] 
+ [ethel :likes sushi]]
+          </code></pre>
+          <p>
+          <pre><code class="java" data-trim contenteditable>
+[:find ?e ?x
+ :where [?e :age 42]
+        [?e :likes ?x]]
+          </code></pre>
+          </p>
+          <p class="fragment">
+          [[fred pizza], [ethel sushi]]
+          </p>
+        </section>
+
+        <section>
+          <pre><code class="java" data-trim contenteditable>
+[:find ?release-name
+ :in $ ?artist-name
+ :where [?artist :artist/name ?artist-name]
+        [?release :release/artists ?artist]
+        [?release :release/name ?release-name]]
+          </code></pre>
+          <p class="fragment">
+          [ ["Power to the People"] 
+            ["Unfinished Music No. 2: Life With the Lions"] 
+            ["Live Peace in Toronto 1969"] 
+            ["Live Jam"]
+            ...]
+          </p>
+          <aside class="notes">most queries are parameterized of course!</aside>
+        </section>
+
+        <section>
+        <section>
+          <pre><code class="clj" data-trim contenteditable>
+[:find ?customer ?product
+ :where [?customer :ship-address ?addr]
+        [?addr :zip ?zip]
+        [?product :product/weight ?weight]
+        [?product :product/price ?price]
+        [(shipping/estimate ?zip ?weight) ?ship-cost]
+        [(<= ?price ?ship-cost)]]
+          </code></pre>
+          <aside class="notes">most queries are parameterized of course!</aside>
+        </section>
+        <section>
+          <img width="800" src="images/datomic.png" >
+        </section>
+          </section>
+
+        <section>
+          <section>Filters</section>
+				<section data-markdown><script type="text/template">
+            e | a | v | transaction | added?
+            --- | --- | --- 
+            1000 | name | Gert-Jan | t1 | yes
+            1000 | residence | Oldebroek | t1 | yes
+            1000 | residence | Oldebroek | t2 | no
+            1000 | residence | Mastenbroek | t2 | yes
+            1000 | residence | Mastenbroek | t3 | no
+            1000 | residence | Enschede  | t3 | yes
+            1000 | residence | Enschede  | t4 | no
+            1000 | residence | Ottoland | t4 | yes
+        </script>
+        </section>
+          <section><h2>as-of</h2></section>
+          <section><h2>since</h2></section>
+          <section><h2>filter</h2></section>
+          <section><h2>history</h2></section>
+        </section>
+
+
+
 
         <section><img width="800" src="images/pickme.png" ></section>
         <section><h1>ongeschikt</h1></section>
-        <section><h2>write scale</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
-        <section><h2>media storage</h2><aside class="notes">images / documents / video</section>
-        <section><h2>write scale</h2></section>
+        <section><h2>[x] write scale</h2><aside class="notes">als je miljarden events wilt opslaan, datomic is not a fit</section>
+        <section><h2>[x] media storage</h2><aside class="notes">images / documents / video</section>
 
         <section><h1>geschikt</h1></section>
-        <section><h2>history</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
-        <section><h2>system of record database</h2><aside class="notes">CRM! waardevolle informatie waar je op vertrouwt, die je bevraag en die je van tijd tot muteert</section>
-        <section><h2>read scale</h2></section>
+        <section><h2>[v] history</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
+        <section><h2>[v] system of record database</h2><aside class="notes">CRM! waardevolle informatie waar je op vertrouwt, die je bevraag en die je van tijd tot muteert</section>
+        <section><h2>[v] read scale</h2></section>
+
+        <section><h1>hands-on</h1></section>
+        <section>
+          <ul>
+            <li>Kies een bekend domein</li>
+            <li>Modelleer dat domein</li>
+            <li>Maak er edn van</li>
+            <li>Transact</li>
+            <li>Query!</li>
+          </ul>
+          <p>
+          Github:
+            <ul>
+              <li>Java: <a href="https://github.com/Datomic/datomic-java-examples">Datomic/datomic-java-examples</a><br/></li>
+              <li>Clojure: <a href="https://github.com/Datomic/day-of-datomic">Datomic/day-of-datomic</a></li>
+            </ul>
+          </p>
+        </section>
+        <section><h3>Is Datomic geschikt voor het domein van je huidige klant?
+            Waarom wel, waarom niet?</h3></section>
       </div>
 
     </div>
