@@ -183,6 +183,7 @@
         <section><h1># 2</h1></section>
         <section><h1>powerful data manipulation</h1></section>
         <section><h1>in the application!</h1></section>
+        <section><h1>traditionally...</h1></section>
         <section><h1>queries</h1></section>
         <section><h1>transacties</h1></section>
         <section><h1>consistentie</h1></section>
@@ -197,6 +198,8 @@
                 <li>built-in-caching</li>
                 <li>you get your own brain: query locally</li>
                 <li>at the speed of memory!</li>
+                <li>storage: SQL databases Oracle, MySQL, etc... DynamoDB,
+                  Cassandra, Riak</li>
               </ul>
             </aside>
           </section>
@@ -385,11 +388,14 @@ don't say it
         <section>
           <pre><code class="clj" data-trim contenteditable>
 ;; pattern
-[:artist/name :artist/gid]
+[:user/name :user/residence]
 
 ;; pattern
-[:track/name {:track/artists [:db/id :artist/name]}]
+[:user/name {:user/address [:address/street-address]}]
           </code></pre>
+          <p class="fragment">
+          [[Gert-Jan A 117]]
+          </p>
         </section>
         <section><h2>entity</h2><aside class="notes">attributen, gelinkte
             entities, lazy navigation, denk aan
@@ -510,17 +516,27 @@ address = jane.get(":person/address")
         </section>
 
 
+        <section><h2>Query demo time</h2></section>
+        <section><h2>advanced</h2></section>
+        <section><img width="400" src="images/sync42.png" ></section>
 
-
-        <section><img width="800" src="images/pickme.png" ></section>
+        <section><img width="400" src="images/pickme.png" ></section>
         <section><h1>ongeschikt</h1></section>
         <section><h2>[x] write scale</h2><aside class="notes">als je miljarden events wilt opslaan, datomic is not a fit</section>
         <section><h2>[x] media storage</h2><aside class="notes">images / documents / video</section>
+        <section><h2>[x] > 1 miljard datoms</h2><aside class="notes">#nr of
+            columns * nr rows and dan voor elke tabel optellen</section>
 
         <section><h1>geschikt</h1></section>
         <section><h2>[v] history</h2><aside class="notes">if you want miljarden events wilt opslaan, datomic is not a fit</section>
         <section><h2>[v] system of record database</h2><aside class="notes">CRM! waardevolle informatie waar je op vertrouwt, die je bevraag en die je van tijd tot muteert</section>
         <section><h2>[v] read scale</h2></section>
+
+        <section><h2>Who</h2></section>
+        <section><img width="200" src="images/numbank.png" ></section>
+        <section><img width="200" src="images/roomkey.png" ></section>
+        <section><img width="200" src="images/rally.png" ></section>
+
 
         <section><h1>hands-on</h1></section>
         <section>
